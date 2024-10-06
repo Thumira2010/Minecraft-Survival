@@ -1,0 +1,563 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4?styles=61009');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-color: #000000;
+}
+.mobNav{
+    width: 100%;
+    height: 13vh;
+    background-color: #1f1c1c76;
+    display: none;
+    position:sticky;
+    top: 0;
+}
+.bi-list{
+    margin-top: 20px;
+    margin-right:30px;
+    font-size: 55px;
+    float: right;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.mobLinks{
+    display: none;
+}
+.container{
+    width: 100%;
+    height: 87vh;
+    background-color: rgb(0, 0, 0);
+}
+.img-cont{
+    width: 100%;
+    height: 57.6vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 13vh;
+    overflow: hidden;
+    background-color: #1f1c1c76;
+    position:sticky; 
+    top: 0;
+    visibility:visible;
+}
+.main-wallpaper{
+    width: 100vw;
+}
+.Logo{
+    height: 150px;
+    background-color:  #00000000;
+}
+.nav-list{
+    list-style-type: none;
+    background-color: #00000000;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; 
+    position: sticky;
+}
+.nav-list li{
+    float: left;
+    background-color: #00000000;
+}  
+.nav-list li a {
+    font-weight: 50px;
+    font-family: "Fredoka", sans-serif;
+    color:#d2cfcf;
+    font-size: 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    padding: .5em;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.3s ease-in-out;
+    
+    &:hover{
+        color: #55FF55;
+    }
+
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        border-bottom: 5px solid #39b139;
+        border-radius: 1em;
+        bottom: .3em;
+        transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:before {
+        
+        width: 1em;
+        transform-origin: left;
+    }
+
+    &:after {
+        width: 82%;
+        left: 1em;
+        transform: translateX(110%);
+    }
+
+    &:hover:before {
+        transform: scaleX(0.3);
+        border-bottom: 5px solid #55FF55;
+    }
+
+    &:hover:after {
+        transform: translateX(0);
+        border-bottom: 5px solid #55FF55;
+    }
+}
+.main-bottom{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 29.4vh;
+
+}
+.main-h1{
+    font-size: 60px;
+    color: aliceblue;
+    font-family: 'Minecraft', sans-serif;                                              
+}
+.main-p{
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'Minecraft', sans-serif;
+    color:#AAAAAA;                                       
+}
+.newest-news{
+    height: 120vh;
+    background-color:#000000;
+}
+.news-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18vh;
+    background-color: #343434;
+}
+.news-topic{
+    background-color: #78f397;
+    background-image: linear-gradient(45deg, #00AA00,#55FF55);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size: 62px;
+    font-family: 'Minecraft', sans-serif;
+}
+.news-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr  ; 
+    gap: 20px;
+    height: 89vh;
+    background-color:#000000;
+    padding: 40px;
+
+}
+.content{
+    max-width: 450px;
+    height: 350px;
+    background-color: #3b8527e7;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b8527c4;
+    height: 106px;
+    line-height: 35px;
+}
+.info h1{
+    font-size: 30px;
+    color: aliceblue;
+    font-family: 'Minecraft', sans-serif ;
+    font-weight: 80;
+}
+.info p{
+    font-family: "Lacquer", system-ui;
+    margin-top: 10px;
+}
+.info p a{
+    font-size: 22px;
+    color: #55FF55;
+    text-align: center;
+    text-decoration: none;
+}
+.bi-box-arrow-up-right{
+    font-size: 21px;
+}
+.news-img{
+ width:450px;
+ height: 240px;
+ object-fit: cover;
+}
+.gameDiv{
+    width: 100%;
+    height: 100vh;
+}
+.games-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18vh;
+}
+.creeper{
+    width: 120px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.games-title{
+    font-size: 60px;
+    font-family: 'Minecraft', sans-serif;
+    background-color: #78f397;
+    background-image: linear-gradient(45deg,#55FF55, #00AA00);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    cursor:pointer;
+}
+.games-title:hover{
+    background-image: linear-gradient(45deg, #00AA00,#55FF55);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.games-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    width: 100%;
+    height: 82vh;
+}
+.game-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr  ; 
+    gap: 40px;
+}
+.game-types{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 520px;
+    background-color: rgb(0, 0, 0);
+}
+.games-img{
+    width: 340px;
+    object-fit: cover;
+}
+.game-type-bottom{
+    display: flex;
+    flex-direction: column;
+}
+.game-h1{
+    font-family: "Merriweather", serif;
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.game-p{
+    font-family: "Montserrat", sans-serif;
+    color: #858282;
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+.hr{
+    background-color: #858282;
+}
+.game-ul{
+    display: flex;
+    justify-content:flex-start;
+    list-style-type: none;
+    margin-top: 12px;
+}
+.game-li{
+    color:#39b139;
+    font-size: 21px;
+    margin-right: 16px;
+}
+.game-li:hover{
+    color: #018a01;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    width: 100%;
+    height: 50vh;
+    background-color: #393a39a5;
+    color: #39b139;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.Mojang{
+    width: 35%;
+}
+.xbox{
+    margin-left: 15px;
+    width: 50%;
+}
+.footer-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.footCommunity{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.footCommunity h2{
+    font-size: 20px;
+    color: #ffffff;
+}
+.footCommunity ul{
+        list-style-type: none;
+}
+.footCommunity li{
+    font-size: 15px;
+}
+.footGames li:hover{
+    text-decoration: underline;
+  }
+.footCommunityUl :hover{
+    text-decoration: underline;
+
+}
+
+@media(max-width:1279px){
+    body{
+        overflow-x: hidden;
+    }
+    .content{
+        max-width: 350px;
+    }
+    .news-img{
+        width: 350px;
+    }
+    .newest-news{
+        height: 132vh;
+        width: 100%;
+    }
+    .news-head{
+        width: 100%;
+    }
+    .info h1{
+        font-size: 25px;
+    }
+    .info p{
+        font-size: 7px;
+    }
+    .games-head{
+        width: 100%;
+    }
+    .gameDiv{
+        width: 100%;
+    }
+    .games-bottom{
+
+        width: 100%;
+    }
+    .game-container{
+        width:100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr   ;
+        grid-template-rows: 1fr  ; 
+    }
+    .game-types{
+        height: 410px;
+        width: 260px;
+    }
+    .games-img{
+        width: 260px;
+    }
+    .game-h1{
+        font-size: 23px;
+    }
+    .game-p{
+        font-size: 14px;
+    }
+    .game-ul{
+        justify-content:space-around;
+    }
+    .game-li{
+        font-size: 14px;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footCommunity h2{
+        font-size: 17px;
+    }
+    .footCommunity li{
+        font-size: 15px;
+    }
+}
+@media(max-width:769px){
+    .navbar{
+       display: none;
+    }
+    .mobNav{
+        display: block;
+        background-color:#018a018d;
+    }
+    .container{
+        height: 75vh;
+        background-color: #ffffff;
+    }
+    .main-wallpaper{
+        height: 50vh;
+        object-fit: cover;
+    }
+    .main-bottom{
+        height: 25vh;
+        background-color: #000000;
+    }
+    .main-h1{
+        font-size: 45px;
+    }
+    .img-cont{
+        background-color: #78f397;
+        height: 50vh;
+    }
+    .mobLinks{
+        display: block;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        background-color: #1f1c1ccf;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .mobContent{
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        font-family: 'Minecraft', sans-serif;   
+    }
+    .mobContent a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+        margin-top: 50px;
+        &:hover{
+            color: #018a01;
+           }
+    }
+
+    .mobLinks .closebtn {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: #fff;
+        transition: 0.3s;
+    }
+    .bi-list:hover{
+        border: 5px solid #fff;
+        border-radius: 5px;
+        color: #000000;
+        background-color:#fff ;
+    }
+
+    .closebtn:hover{
+        color:red;
+    }
+    .newest-news{
+        height: 310vh;
+    }
+    .news-bottom{
+        height: 281.9vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6); 
+    }
+    .content{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .creeper{
+        display: none;
+    }
+    .gameDiv{
+        height: 280vh;
+    }
+    .games-bottom{
+        height: 280vh;
+
+    }
+    .games-head{
+        background-color: #343434;
+    }
+    .game-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6);
+        margin-bottom: 350px;
+    }
+    .game-types{
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 440px;
+    }
+    .games-img{
+        width: 440px;
+        height: 260px;
+    }
+    .footer{
+        grid-template-columns: 1.3fr 0.8fr 1fr 1fr;
+    }
+    .footCommunity h2{
+        font-size: 17px;
+        color: #ffffff;
+    }
+    .footCommunity ul{
+            list-style-type: none;
+    }
+    .footCommunity li{
+        font-size: 12px;
+    }
+    .credits{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .xbox{
+        margin: 0;
+    }
+}
